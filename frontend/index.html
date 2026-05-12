@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Message Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📱 WhatsApp Message Scheduler</h1>
+      <p class="subtitle">Schedule messages to be sent automatically</p>
+    </header>
+
+    <main class="main-content">
+      <section class="form-section">
+        <h2>Schedule a Message</h2>
+        <form id="messageForm" class="message-form">
+          <div class="form-group">
+            <label for="phoneNumber">Recipient Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="+1234567890"
+              required
+            >
+            <small>Include country code (e.g., +1 for USA, +44 for UK)</small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here..."
+              rows="4"
+              required
+            ></textarea>
+            <small class="char-count"><span id="charCount">0</span>/160</small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="scheduledDate">Date</label>
+              <input
+                type="date"
+                id="scheduledDate"
+                name="scheduledDate"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="scheduledTime">Time</label>
+              <input
+                type="time"
+                id="scheduledTime"
+                name="scheduledTime"
+                required
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Schedule Message</button>
+        </form>
+      </section>
+
+      <section class="messages-section">
+        <h2>Scheduled Messages</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="sent">Sent</button>
+          <button class="filter-btn" data-filter="failed">Failed</button>
+        </div>
+        <div id="messagesList" class="messages-list">
+          <p class="empty-state">No messages scheduled yet</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
