@@ -424,7 +424,7 @@ f:\Side Projects\MessageScheduler\backend\.env
 
 ```env
 # MongoDB
-MONGODB_URI=mongodb+srv://HaroonWaheed:Haroon123456@cluster.mongodb.net/messagescheduler?retryWrites=true&w=majority
+MONGODB_URI=
 
 # AWS SNS (WhatsApp/SMS)
 AWS_ACCESS_KEY_ID=AKIA...
