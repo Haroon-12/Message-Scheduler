@@ -1,0 +1,26 @@
+{
+  "name": "message-scheduler-backend",
+  "version": "1.0.0",
+  "description": "WhatsApp Message Scheduler Backend with MongoDB",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["whatsapp", "scheduler", "messages", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.0.3",
+    "aws-sdk": "^2.1500.0",
+    "node-schedule": "^2.1.1"
+  }
+}
