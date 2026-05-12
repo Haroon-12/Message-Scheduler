@@ -77,7 +77,7 @@ npm install
 **2. Create .env file**
 ```bash
 # In backend/ folder, create .env with:
-MONGODB_URI=mongodb+srv://mongouser:password@cluster0.mongodb.net/messagescheduler?retryWrites=true&w=majority
+MONGODB_URI=
 PORT=5000
 NODE_ENV=development
 ```
